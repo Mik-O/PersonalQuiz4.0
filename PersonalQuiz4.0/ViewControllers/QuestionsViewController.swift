@@ -42,7 +42,11 @@ class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        let resultVC = segue.destination as! ResultsViewController
+        resultVC.answers = answersChoosen
+        
+        print("массив ответов \(answersChoosen)")
+        
     }
 
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
@@ -79,7 +83,7 @@ extension QuestionsViewController {
         let currentQuestion = questions[questionIndex]
         questionLabel.text = currentQuestion.text
         
-        let totalProgress = Float(questionIndex) / Float(questions.count)
+  //      let totalProgress = Float(questionIndex) / Float(questions.count)
 //        questionProgressView.setProgress(totalProgress, animated: true)
         
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
@@ -92,6 +96,8 @@ extension QuestionsViewController {
         case .single: showSingleStackView(with: currentAnswers)
         case .multiple: showMultipleStackView(with: currentAnswers)
         case .ranged: showRangeStackView(with: currentAnswers)
+            
+            print("текущий ответ \(currentAnswers)")
         }
     }
     

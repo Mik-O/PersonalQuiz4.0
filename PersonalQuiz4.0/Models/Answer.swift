@@ -7,7 +7,7 @@
 
 struct Answer {
     let text: String
-    let tyoe: AnimalType
+    let type: AnimalType
 }
 
 enum AnimalType: Character {
