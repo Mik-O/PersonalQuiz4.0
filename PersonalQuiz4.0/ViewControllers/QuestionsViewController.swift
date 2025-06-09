@@ -10,7 +10,12 @@ import UIKit
 class QuestionsViewController: UIViewController {
 
     @IBOutlet var questionLabel: UILabel!
-    @IBOutlet var questionProgressView: UIProgressView!
+    @IBOutlet var questionProgressView: UIProgressView! {
+        didSet {
+            questionProgressView.progress = 0
+        }
+    }
+    
     @IBOutlet var rangedSlider: UISlider! {
         didSet {
             let answerCount = Float(currentAnswers.count - 1)
@@ -19,6 +24,8 @@ class QuestionsViewController: UIViewController {
             
         }
     }
+    
+    
     
     @IBOutlet var singleStackView: UIStackView!
     @IBOutlet var multipleStackView: UIStackView!
@@ -83,8 +90,8 @@ extension QuestionsViewController {
         let currentQuestion = questions[questionIndex]
         questionLabel.text = currentQuestion.text
         
-  //      let totalProgress = Float(questionIndex) / Float(questions.count)
-//        questionProgressView.setProgress(totalProgress, animated: true)
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+        questionProgressView.setProgress(totalProgress, animated: true)
         
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         

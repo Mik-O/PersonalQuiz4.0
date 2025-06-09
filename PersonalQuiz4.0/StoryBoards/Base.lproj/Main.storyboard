@@ -95,7 +95,7 @@
                                 <rect key="frame" x="0.0" y="92.5" width="320" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X91-m7-tM6">
-                                <rect key="frame" x="16" y="104.5" width="288" height="24"/>
+                                <rect key="frame" x="16" y="106.5" width="288" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -243,16 +243,15 @@
                         <viewLayoutGuide key="safeArea" id="WMG-ih-b5j"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="CQ2-2O-FTB" firstAttribute="top" secondItem="WMG-ih-b5j" secondAttribute="top" id="0bp-g7-Zt8"/>
                             <constraint firstItem="CQ2-2O-FTB" firstAttribute="trailing" secondItem="WMG-ih-b5j" secondAttribute="trailing" id="4Jx-65-dIR"/>
                             <constraint firstItem="EIl-95-KlO" firstAttribute="leading" secondItem="WMG-ih-b5j" secondAttribute="leading" constant="16" id="8Nx-6z-E1L"/>
                             <constraint firstItem="ZJN-yn-vRf" firstAttribute="leading" secondItem="WMG-ih-b5j" secondAttribute="leading" constant="16" id="AKY-UJ-4MA"/>
                             <constraint firstItem="WMG-ih-b5j" firstAttribute="trailing" secondItem="ZJN-yn-vRf" secondAttribute="trailing" constant="16" id="GKv-la-K7v"/>
                             <constraint firstItem="WMG-ih-b5j" firstAttribute="trailing" secondItem="X91-m7-tM6" secondAttribute="trailing" constant="16" id="Lk8-fv-Jwv"/>
                             <constraint firstItem="WMG-ih-b5j" firstAttribute="trailing" secondItem="EIl-95-KlO" secondAttribute="trailing" constant="16" id="Moc-kY-S4M"/>
-                            <constraint firstItem="X91-m7-tM6" firstAttribute="top" secondItem="CQ2-2O-FTB" secondAttribute="bottom" constant="8" id="P7w-iW-jZt"/>
                             <constraint firstItem="X91-m7-tM6" firstAttribute="leading" secondItem="WMG-ih-b5j" secondAttribute="leading" constant="16" id="Sat-NC-DpQ"/>
                             <constraint firstItem="vqj-bD-pqg" firstAttribute="leading" secondItem="WMG-ih-b5j" secondAttribute="leading" constant="16" id="e4g-1b-w2o"/>
+                            <constraint firstItem="X91-m7-tM6" firstAttribute="top" secondItem="CQ2-2O-FTB" secondAttribute="bottom" constant="10" id="k6Q-OX-2jr"/>
                             <constraint firstItem="EIl-95-KlO" firstAttribute="centerY" secondItem="fqh-P2-ZVG" secondAttribute="centerY" id="kic-dV-O4u">
                                 <variation key="heightClass=compact-widthClass=compact" constant="16"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="16"/>
@@ -267,19 +266,14 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="16"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="16"/>
                             </constraint>
+                            <constraint firstItem="CQ2-2O-FTB" firstAttribute="top" secondItem="WMG-ih-b5j" secondAttribute="top" id="yLt-tk-TBM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="Auh-6L-gOc">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="ZUm-qp-mg7">
-                            <connections>
-                                <segue destination="28w-jD-tB4" kind="show" id="occ-3q-DXw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="Auh-6L-gOc"/>
                     <connections>
                         <outlet property="multipleStackView" destination="vqj-bD-pqg" id="G4a-rH-NdG"/>
                         <outlet property="questionLabel" destination="X91-m7-tM6" id="2rl-EI-a7T"/>
-                        <outlet property="questionProgressView" destination="fqh-P2-ZVG" id="Br8-hu-g9R"/>
+                        <outlet property="questionProgressView" destination="CQ2-2O-FTB" id="avG-cS-UhG"/>
                         <outlet property="rangedSlider" destination="BM3-8n-y0Q" id="E4M-Wr-LgJ"/>
                         <outlet property="rangedStackView" destination="EIl-95-KlO" id="EiR-Py-WMp"/>
                         <outlet property="singleStackView" destination="ZJN-yn-vRf" id="v9l-bY-ocO"/>
@@ -374,9 +368,6 @@
             <point key="canvasLocation" x="751.875" y="-2.112676056338028"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="jAh-Ly-bBR"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGray3Color">
             <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
